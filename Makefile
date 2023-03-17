@@ -42,7 +42,7 @@ $(NAME) 	: $(OBJ)
 debug 		: all
 		$(CC) $(DEBUG) -o $(NAME) $(MAIN) $(SRC) $(CFLAGS)
 
-test_run :
+tests_run :
 		$(CC) -o $(NAME_TEST) $(SRC_TEST) $(CFLAGS)
 		-lcriterion -lgcov --coverage
 		./$(NAME_TEST)
@@ -60,4 +60,4 @@ fclean 		: clean
 
 re		: fclean all
 
-.PHONY 		: all debug clean fclean re
+.PHONY 		: all debug tests_run clean fclean re
