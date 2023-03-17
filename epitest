@@ -1,1 +1,0 @@
-docker run --tty --rm -v $(pwd):/home/project -w /home/project epitechcontent/epitest-docker /bin/bash
